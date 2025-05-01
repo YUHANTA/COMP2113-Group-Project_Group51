@@ -67,6 +67,12 @@ void BoardSize(LENGTH &r, LENGTH &c){
      c = b;
 }
 
+void swap_player(char& p){
+    if (p == '1')
+        p = '2'; // X -> 0
+    else p = '1';// 0 -> X
+}
+
 int make_move(vector<vector<char>>& p, string move){
     size_t row_location_letter, column_location_letter;
     if (move.size() == 2){
@@ -82,6 +88,50 @@ int make_move(vector<vector<char>>& p, string move){
 	return 0;
     }
     else return -1;
+}
+int judge(vector<vector<char>> b, int n)
+{
+    char c = '1';
+    for (int chess = 1; chess != 3; chess++)
+    {
+        for (size_t i = 0; i <= row - 1; i++)
+        {
+            for (size_t j = 0; j <= column - 5; j++)
+            {
+                if (b[i][j] == c && b[i][j + 1] == c && b[i][j + 2] == c && b[i][j + 3] == c && b[i][j + 4] == c) //check row
+                    return chess;
+            }
+        }
+        for (size_t i = 0; i <= row - 5; i++)
+        {
+            for (size_t j = 0; j <= column - 1; j++)
+            {
+                if (b[i][j] == c && b[i + 1][j] == c && b[i + 2][j] == c && b[i + 3][j] == c && b[i + 4][j] == c) // check column
+                    return chess;
+            }
+        }
+        for (size_t i = 0; i <= row - 5; i++)
+        {
+            for (size_t j = 0; j <= column - 5; j++)
+            {
+                if (b[i][j] == c && b[i + 1][j + 1] == c && b[i + 2][j + 2] == c && b[i + 3][j + 3] == c && b[i + 4][j + 4] == c)
+                    return chess;
+            }
+        }
+        for (size_t i = 0; i <= row - 5; i++)
+        {
+            for (size_t j = 4; j <= column - 1; j++)
+            {
+                if (b[i][j] == c && b[i + 1][j - 1] == c && b[i + 2][j - 2] == c && b[i + 3][j - 3] == c && b[i + 4][j - 4] == c)
+                    return chess;
+            }
+        }
+        c = '2'; 
+    }
+    if (n == row * column)
+        return 3;
+    else
+        return 0;
 }
 
 int main(){
