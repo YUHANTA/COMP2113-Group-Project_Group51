@@ -33,5 +33,6 @@ Demonstration Video:
 	 | |__| | |__| | |_) / ____ \| |\  | |__| |
 	  \_____|\____/|____/_/    \_\_| \_|\_____|
                                            
-Gobang, also called Five in a Row, is an abstract strategy board game. The goal is to line up 5 pieces of the same color as quickly as possible on the board
+Gobang, also called Five in a Row, is an abstract strategy board game. 
+The goal is to line up 5 pieces of the same color as quickly as possible on the board
 ## Game_Rules
