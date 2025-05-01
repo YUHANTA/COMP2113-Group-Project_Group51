@@ -1,5 +1,5 @@
 # COMP2113-Group-Project_Group51
-This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao. We try to combine the game and AI to make this game more fun.[README.md](https://github.com/user-attachments/files/19997061/README.md)
+This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao. We try to combine the game and AI to make this game more fun.
 
 ![](https://img.shields.io/badge/Language-C%2B%2B11-blue.svg)
 
