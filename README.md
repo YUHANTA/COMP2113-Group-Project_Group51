@@ -19,7 +19,7 @@ This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao
 
 Demonstration Video:
 
-## Team_Member
+## Team_Member_contribution
 
 * **Yu Hanshiyang (Implemention of menu and main codes; Desigh and Implemention of game method 3 and 4; Code improvement and makefile coding)**
 
