@@ -134,6 +134,32 @@ int judge(vector<vector<char>> b, int n)
         return 0;
 }
 
+bool start_new_game(){
+     string x;
+     cout << "Your performance is perfect! How about playing another game? (Y/N):";
+     cout << endl << "Pay attention please: You should input Y or N;" << endl;
+     cout << "Now, your choice:";
+     cin >> x;
+     if (x == "Y") return true;
+     else return false;
+     return false;
+}
+
+void InitialLoadFunc(bool &hongkong){
+     string y;
+     if (load_file(game_score)
+        cout << "Players, welcome back,your current score is " << game_score << endl;
+     else{
+         cout << "You have new players and no save, do you need our tutorial class. Don't worry it will not occupy too much time.(Y/N): "
+	 cin y;
+	 if (x == "Y") hongkong = true;
+	 else if (x == "N") hongkong = false;
+	 else{ 
+	    cout << "Invalid intput and we will begin our tutorial clss automatically.";
+            hongkong = true;
+	 }
+}
+
 int main(){
     welcome() //code in menu
     New_game:
