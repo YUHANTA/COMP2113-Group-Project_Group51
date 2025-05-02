@@ -339,6 +339,7 @@ int p_v_a3(int &gs){
 		 }
           }
         }
+        }
 
         if (player != ai){
             cout << "Player move: ";
