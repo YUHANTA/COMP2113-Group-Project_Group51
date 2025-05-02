@@ -339,7 +339,6 @@ int p_v_a3(int &gs){
 		 }
           }
         }
-        }
 
         if (player != ai){
             cout << "Player move: ";
@@ -371,6 +370,7 @@ int p_v_a3(int &gs){
         }
         swap_player(player);
 	turnnumber++;
+    }
     switch (judge(board, step_count))
     {
         case 1:
