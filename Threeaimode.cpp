@@ -87,7 +87,7 @@ void Ai_best_move(int &x, int &y, vector<vector<char>> p){
 }
 
 //fantastic work! Master method - the most difficult one in a standard board
-int p_v_a3(int &games){
+int p_v_a3(int &gs){
     string move, saw, step2;
     srand((unsigned)time(NULL));
     instruction();
@@ -154,7 +154,7 @@ int p_v_a3(int &games){
 	
 	if (turnnumber == 4){
 	  if (step2 == "II"){
-	        if (saw != "IG" && saw != "HF" && sawa != "IG" && sawa != "HF"){
+	        if (saw != "IH" && saw != "IG" && sawa != "IH" && sawa != "IG"){
 		  move = "IG";
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
@@ -162,7 +162,7 @@ int p_v_a3(int &games){
 		  print_board(board);
 		  step_count++;
 		}
-		else{
+		else if (saw != "GI" && saw != "HI" && sawa != "GI" && sawa != "HI"){
 		  move = "GI";
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
@@ -170,7 +170,26 @@ int p_v_a3(int &games){
 		  prin_board(board);
 		  step_count++;
 		}
-           }
+		else if (saw != "GG" && sawa != "GG")
+		{ move = "II";
+	          cout << "AI, move: " << move << endl;
+	          cout << endl;
+	          make_move(board, move);
+	          print_board(board);
+	          step_count++;
+		}
+		else{
+		    int x = 0,y = 0;
+                    Ai_best_move(x, y, board);
+                    move = x + 65;                                      //convert move to alphabet
+                    move += y + 65;
+                    make_move(board, move);
+                    cout << "AI, move: " << move << endl;
+                    cout << endl;
+                    print_board(board);
+                    step_count++;
+		 }
+          }
 	  else if(step2 == "GG") {
 	        if (saw != "IG" && saw != "HG" && sawa != "IG" && sawa != "HG"){
 		  move = "IG";
@@ -208,7 +227,118 @@ int p_v_a3(int &games){
                     step_count++;
 		 }
           }
-	 }
+	 else if(step2 == "IG") {
+	        if (saw != "GG" && saw != "HG" && sawa != "GG" && sawa != "HG"){
+		  move = "GG";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  print_board(board);
+		  step_count++;
+		}
+		else if (saw != "IH" && saw != "II" && sawa != "II" && sawa != "IH"){
+		  move = "II";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  prin_board(board);
+		  step_count++;
+		}
+		else if (saw != "GI" && sawa != "GI")
+		{ move = "GI";
+	          cout << "AI, move: " << move << endl;
+	          cout << endl;
+	          make_move(board, move);
+	          print_board(board);
+	          step_count++;
+		}
+		else{
+		    int x = 0,y = 0;
+                    Ai_best_move(x, y, board);
+                    move = x + 65;                                      //convert move to alphabet
+                    move += y + 65;
+                    make_move(board, move);
+                    cout << "AI, move: " << move << endl;
+                    cout << endl;
+                    print_board(board);
+                    step_count++;
+		 }
+          }
+	 else if(step2 == "GI") {
+	        if (saw != "GH" && saw != "GG" && sawa != "GH" && sawa != "GG"){
+		  move = "GG";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  print_board(board);
+		  step_count++;
+		}
+		else if (saw != "HI" && saw != "II" && sawa != "HI" && sawa != "II"){
+		  move = "II";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  prin_board(board);
+		  step_count++;
+		}
+		else if (saw != "IG" && sawa != "IG")
+		{ move = "IG";
+	          cout << "AI, move: " << move << endl;
+	          cout << endl;
+	          make_move(board, move);
+	          print_board(board);
+	          step_count++;
+		}
+		else{
+		    int x = 0,y = 0;
+                    Ai_best_move(x, y, board);
+                    move = x + 65;                                      //convert move to alphabet
+                    move += y + 65;
+                    make_move(board, move);
+                    cout << "AI, move: " << move << endl;
+                    cout << endl;
+                    print_board(board);
+                    step_count++;
+		 }
+          }
+	  else {
+	        if (saw != "GG" && saw != "HG" && sawa != "GG" && sawa != "HG"){
+		  move = "GG";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  print_board(board);
+		  step_count++;
+		}
+		else if (saw != "IH" && saw != "II" && sawa != "IH" && sawa != "II"){
+		  move = "II";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  prin_board(board);
+		  step_count++;
+		}
+		else if (saw != "GI" && sawa != "GI")
+		{ move = "GI";
+	          cout << "AI, move: " << move << endl;
+	          cout << endl;
+	          make_move(board, move);
+	          print_board(board);
+	          step_count++;
+		}
+		else{
+		    int x = 0,y = 0;
+                    Ai_best_move(x, y, board);
+                    move = x + 65;                                      //convert move to alphabet
+                    move += y + 65;
+                    make_move(board, move);
+                    cout << "AI, move: " << move << endl;
+                    cout << endl;
+                    print_board(board);
+                    step_count++;
+		 }
+          }
+        }
 
         if (player != ai){
             cout << "Player move: ";
@@ -240,6 +370,68 @@ int p_v_a3(int &games){
         }
         swap_player(player);
 	turnnumber++;
+    switch (judge(board, step_count))
+    {
+        case 1:
+            if (ai == '1')
+                cout << "player AI win" << endl;
+            else{
+                cout << "player win" << endl;
+                gs += 100;
+            }
+            break;
+        case 2:
+            if (ai == '2')
+                cout << "player AI win" << endl;
+            else{
+                cout << "player win" << endl;
+                gs += 100;
+            }
+            break;
+        case 3:
+            cout << "draw" << endl;
+            break;
+        default:
+            break;
+    }
+    return 0;
+}
+
+int p_v_a2(int &gs){
+    string move;
+    srand((unsigned)time(NULL));
+    instruction();
+    random_role(ai);                                //ai = 1 for AI moves first, = 2 for player moves first
+    print_board(board);
+    while (judge(board, step_count) == 0)
+    {
+        if (player != ai){
+            cout << "Player move: ";
+            cin >> move;
+
+            if (make_move(board, move) == 0)
+            {
+                cout << endl;
+                print_board(board);
+                step_count++;
+            }
+            else
+                cout << "Player PASS." << endl;
+
+        }
+
+        else if (player == ai){
+            int x = 0,y = 0;
+            Ai_best_move(x, y, board);
+            move = x + 65;                                      //convert move to alphabet
+            move += y + 65;
+            make_move(board, move);
+            cout << "AI, move: " << move << endl;
+            cout << endl;
+            print_board(board);
+            step_count++;
+        }
+        swap_player(player);
     }
     switch (judge(board, step_count))
     {
@@ -257,6 +449,69 @@ int p_v_a3(int &games){
             else{
                 cout << "player win" << endl;
                 gs += 100;
+            }
+            break;
+        case 3:
+            cout << "draw" << endl;
+            break;
+        default:
+            break;
+    }
+    return 0;
+}
+
+int p_v_a1(int &gs){
+    string move;
+    srand((unsigned)time(NULL));
+    instruction();
+    random_role(ai);                                    //ai = 1 for AI moves first, = 2 for player moves first
+    print_board(board);
+    while (judge(board, step_count) == 0)
+    {
+        if (player != ai){
+            cout << "Player move: ";
+            cin >> move;
+
+            if (make_move(board, move) == 0)
+            {
+                cout << endl;
+                print_board(board);
+                step_count++;
+            }
+            else
+                cout << "Player  PASS." << endl;
+        }
+
+        else if (player == ai){
+            move = rand()%row + 65;                                    //convert move to alphabet
+            move += rand()%column + 65;
+            while (make_move(board, move) != 0){                    //if not a valid move
+                move = rand()%6 + 65;                                 //regenerate
+                move += rand()%13 + 65;
+            }
+            cout << "AI, move: " << move << endl;
+            cout << endl;
+            print_board(board);
+            step_count++;
+        }
+        swap_player(player);
+    }
+    switch (judge(board, step_count))
+    {
+        case 1:
+            if (ai == '1')
+                cout << "player AI win" << endl;
+            else{
+                cout << "player 1 win" << endl;
+                gs += 10;
+            }
+            break;
+        case 2:
+            if (ai == '2')
+                cout << "player AI win" << endl;
+            else{
+                cout << "player 2 win" << endl;
+                gs += 10;
             }
             break;
         case 3:
