@@ -134,6 +134,36 @@ int judge(vector<vector<char>> b, int n)
         return 0;
 }
 
+int p_v_p(){
+    string move;
+    instruction();
+    print_board(board);
+    while (judge(board, step_count) == 0){
+          cout << "Player " << player << ",move: ";
+	  cin >> move;
+	  if (make_move(board, move) == 0){
+	     cout << endl;
+	     print_board(board);
+	     step_count++;
+	  }
+	  else{
+	  cout << "Player " << player << "PASS." << endl;
+	  }
+	  swap_player(player);
+    }
+    switch (judge(board, step_count){
+           case 1: 
+	      cout << "player 1 win" << endl;
+	   case 2:
+	      cout << "player 2 win" << endl;
+	   case 3:
+	      cout << "draw" << endl;
+	   default:
+	      break;
+    }
+    return 0;
+}
+
 bool start_new_game(){
      string x;
      cout << "Your performance is perfect! How about playing another game? (Y/N):";
