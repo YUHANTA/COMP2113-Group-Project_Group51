@@ -3,6 +3,9 @@
 #include <vector>
 #include <math>
 #include "main.h"
+#include "Threeaimode.h"
+#include "munu.h"
+#include "save_load_game.h"
 
 using namespace std;
 
@@ -205,22 +208,32 @@ int main(){
     build_board(board);
 
     if (gamemode == "0"){
+       Boardsize(row, column);
+       build_board(board);
        cout << "You are playing with Player" << endl;
        cout << endl;
        p_v_p()
     }
     else if (game mode == '1'){
+       Boardsize(row, column);
+       build_board(board);
        cout << "You are playing with Ai - Easy method" << endl;
        cout << endl;
        p_v_a1(game_score);
     }
     else if (game mode == '2'){
+       Boardsize(row, column);
+       build_board(board);
        cout << "You are playing with Ai - Difficult method" << endl;
        cout << "Wish you lucky!" << endl;
        cout << endl;
        p_v_a2(game_score);
     }
     else{
+       cout << "In this method, you will fight master ai in 15 x 15 standard board" << endl;
+       row = 15;
+       column = 15;
+       build_board(board);
        cout << "You are playing with Ai - Master  method" << endl;
        cout << "Don't lose heart anymore. You can win him" << endl;
        cout << endl;
