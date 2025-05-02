@@ -153,17 +153,8 @@ int p_v_a3(int &games){
 	}
 	
 	if (turnnumber == 4){
-	  if (step2 == "GG" || step2 == "II"){
-	     if (step2 == "GG"){
-	        if (sawa != "IG" && sawa != "GI" && sawa != "II" && saw != "IG" && saw != "GI" && saw != "II"){
-		   move = "GI";
-		   make_move(board, move);
-		   cout << "AI, move: " << move << endl;;
-                   cout << endl;
-		   print_board(board);
-		   step_count++;
-                }
-	        else if (saw != "IG" && saw != "HF" && sawa != "IG" && sawa != "HF"){
+	  if (step2 == "II"){
+	        if (saw != "IG" && saw != "HF" && sawa != "IG" && sawa != "HF"){
 		  move = "IG";
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
@@ -180,6 +171,44 @@ int p_v_a3(int &games){
 		  step_count++;
 		}
            }
+	  else if(step2 == "GG") {
+	        if (saw != "IG" && saw != "HG" && sawa != "IG" && sawa != "HG"){
+		  move = "IG";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  print_board(board);
+		  step_count++;
+		}
+		else if (saw != "GI" && saw != "GH" && sawa != "GI" && sawa != "GH"){
+		  move = "GI";
+		  make_move(board, move);
+		  cout << "AI, move: " << move << endl;
+		  cout << endl;
+		  prin_board(board);
+		  step_count++;
+		}
+		else if (saw != "II" && sawa != "II")
+		{ move = "II";
+	          cout << "AI, move: " << move << endl;
+	          cout << endl;
+	          make_move(board, move);
+	          print_board(board);
+	          step_count++;
+		}
+		else{
+		    int x = 0,y = 0;
+                    Ai_best_move(x, y, board);
+                    move = x + 65;                                      //convert move to alphabet
+                    move += y + 65;
+                    make_move(board, move);
+                    cout << "AI, move: " << move << endl;
+                    cout << endl;
+                    print_board(board);
+                    step_count++;
+		 }
+          }
+	 }
 
         if (player != ai){
             cout << "Player move: ";
