@@ -58,13 +58,13 @@ void select_mode(char& gamemode) {
         cin >> temp;
     }
     if (temp == "1")
-        gamemode = '1';
+        gamemode = '0';
     else if (temp == "2")
-        gamemode = '2';
+        gamemode = '1';
     else if (temp == "3")
-        gamemode = '3';
+        gamemode = '2';
     else
-        gamemode = '4';
+        gamemode = '3';
     }
 void congratulations() {
     cout << R"( _____                                   _           _         _    _                      _ )" << endl;
