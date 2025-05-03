@@ -1,5 +1,5 @@
-#ifndef COMP2113_Group_Project_Group51
-#define COMP2113_Group_Project_Group51
+#ifndef MENU_H
+#define MENU_H
 void Welcome();
 void select_mode(char &gamemode);
 void instruction();
