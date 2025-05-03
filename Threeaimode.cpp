@@ -2,6 +2,7 @@
 #include "Threeaimode.h"
 #include "game.h"
 #include "menu.h"
+#include "Threeaimode.h"
 #include <iostream>
 #include <time.h>
 
