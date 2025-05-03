@@ -13,7 +13,7 @@ This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao
 
 [Game Rules](#Game_Rules)
 
-[Game Features](##Game_Feature_(Reaching_the_requirements_of_the_project))
+[Game Features](##Game_Feature)
 
 [Addtional Explanation](#Additional_Explanation)
 
@@ -42,7 +42,7 @@ The goal is to line up 5 pieces of the same color as quickly as possible on the 
 4.If you choose to match with our AI, you will receive points. There are three mode, easy(10points)，hard(100points), master(200 points).
 p.s. Don't be afraid of fogetting the rules, it will be shown agian when you are experiencing our game.
 
-## Game_Feature (Reaching the requirements of the project)
+## Game_Feature
 Code requirements:
 1. Generation of random events:
    	These are including in the AI mode of our game, all three modes are random movements by ai.
