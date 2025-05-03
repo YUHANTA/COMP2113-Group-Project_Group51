@@ -51,7 +51,7 @@ void save_file(vector<vector<char>>p) {
 	else if (gamemode == '1') {
 		save << "Gamemode: Player VS AI(Easy)" << endl;
 		{
-			if (Player == ai) {
+			if (player == ai) {
 				save << "Winner: AI (Easy mode)" << endl;
 
 			}
@@ -70,7 +70,7 @@ void save_file(vector<vector<char>>p) {
 
 		}
 	}
-	else if (gamemoade == '3') {
+	else if (gamemode == '3') {
 		save << "Gamemoade: Player VS AI(Master)" << endl;
 		if (player == ai) {
 			save << "Winner : AI (MasterMode)" << endl;
