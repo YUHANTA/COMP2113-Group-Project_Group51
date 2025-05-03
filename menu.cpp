@@ -1,9 +1,5 @@
 ﻿#include<iostream>
 #include<string>
-#include "game.h"
-#include "save_load_game.h"
-#include "Threeaimode.h"
-#include "menu.h"
 using std::cout;
 using std::endl;
 using std::string;
