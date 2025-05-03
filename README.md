@@ -21,7 +21,7 @@ Demonstration Video:
 
 ## Team_Member_contribution
 
-* **Yu Hanshiyang (Implemention of menu and main codes; Design and Implemention of game method; Code improvement and makefile coding)**
+* **Yu Hanshiyang (Implemention of main.cpp and makefile codes; Design and Implemention of game method; Code improvement and makefile coding)**
 
 * **Ma Jinhao (Desigh and Implemention of game menu; Design and Implemention of save/load part)**
 
