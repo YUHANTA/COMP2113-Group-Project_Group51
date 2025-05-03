@@ -16,7 +16,7 @@ void Welcome() {
 
 void instruction() {
     cout << "please make a balid move, else PASS" << endl;
-    cout << "Please enter moves by instructions like AA , AB , BC , where the first letter indicates row number and the second indicates the column";
+    cout << "Please enter moves by instructions like AA , AB , BC , where the first letter indicates row number and the second indicates the column" << endl;
 }
 void tut_func() {
     cout << "Here is the basic rules" << endl;
