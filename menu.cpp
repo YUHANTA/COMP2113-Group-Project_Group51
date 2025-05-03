@@ -1,5 +1,8 @@
 ﻿#include<iostream>
 #include<string>
+#include "menu.h"
+#include "game.h"
+#include "save_load_game.h"
 using std::cout;
 using std::endl;
 using std::string;
