@@ -57,7 +57,14 @@ void select_mode(char& gamemode) {
         cout << "Not valid gamemode, we can tell us if you want to add, please eneter a gamemode in the list above" << endl;
         cin >> temp;
     }
-    gamemode = temp;
+    if (temp == "1")
+        gamemode = '1';
+    else if (temp == "2")
+        gamemode = '2';
+    else if (temp == "3")
+        gamemode = '3';
+    else
+        gamemode = '4';
     }
 void congratulations() {
     cout << R"( _____                                   _           _         _    _                      _ )" << endl;
