@@ -6,13 +6,14 @@
 #include <ctime>
 #include "save_load_game.h"
 #include "game.h"
+using namespace std;
 using std::endl;
 using std::cout;
 using std::ios;
 using std::vector;
 
 bool load_file(int& gs) {
-	std::string line, last_line;
+	string line, last_line;
 	std::ifstream load("save.dat",ios::in);
 	if (!load.is_open()) {
 		return false;
@@ -28,7 +29,7 @@ bool load_file(int& gs) {
 void save_file(vector<vector<char>>p) {
 	time_t now = time(0);
 	char* dt = ctime(&now);
-	std::ofstream save("save.dat", ios::app);
+	std::ofstream save("save.dat", ios::out | ios::app);
 	char* row_arr = new char[26]();
 	char* col_arr = new char[26]();
 
