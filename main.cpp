@@ -30,10 +30,6 @@ void build_board(vector<vector<char>>& p) // define an empty board
 
 void print_board(vector<vector<char>> p)
 {
-    /* construct two array with maximum size 26, allocate this area to store alphabet
-     * Use the characteristics of ascii code to assign them one by one
-     * after output, delete it to release memory
-    */
 
     char *row_arr = new char[26]();            //MAX = 26
     char *col_arr = new char[26]();            //MAX = 26
