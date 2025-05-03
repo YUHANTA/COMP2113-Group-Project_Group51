@@ -154,7 +154,7 @@ void swap_player(char& p)
     else p = '1';// 0 -> X
 }
 
-int player_vs_player(){
+int p_v_p(){
     string move;
     instruction();
     print_board(board);
