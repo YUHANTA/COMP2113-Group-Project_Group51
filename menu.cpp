@@ -57,7 +57,7 @@ void select_mode(char& gamemode) {
         cout << "Not valid gamemode, we can tell us if you want to add, please eneter a gamemode in the list above" << endl;
         cin >> temp;
     }
-    temp = std::to_string(std::stoi(temp) -1);
+    gamemode = temp;
     }
 void congratulations() {
     cout << R"( _____                                   _           _         _    _                      _ )" << endl;
