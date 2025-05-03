@@ -5,7 +5,7 @@
 #include <fstream>
 #include <ctime>
 #include "save_load_game.h"
-#include"game.h"
+#include "game.h"
 using std::endl;
 using std::cout;
 using std::ios;
