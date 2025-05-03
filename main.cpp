@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <math>
 #include "main.h"
 #include "Threeaimode.h"
 #include "munu.h"
