@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#ifndef COMP2113_Group_Project_Group51
-#define COMP2113_Group_Project_Group51
+#ifndef THREEAIMODE_H
+#define THREEAIMODE_H
 using namespace std;
 using std::vector;
 
