@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "game.h"
+#include "main.h"
 #include "save_load_game.h"
 #include "PVAmode.h"
 #include "menu.h"
