@@ -30,7 +30,7 @@ void tut_func() {
 
 void select_mode(char& gamemode) {
     string temp = "0";
-    cout << "╔═══════════════════════════════════════" << endl;
+    cout << "╔══════════════════════════════════════════════════════════════════════════════+" << endl;
     cout << "║                                                                              ║" << endl;
     cout << "║                                    GOBANG !                                  ║" << endl;
     cout << "║                                                                              ║" << endl;
@@ -49,7 +49,7 @@ void select_mode(char& gamemode) {
     cout << "║                                                                              ║" << endl;
     cout << "║                                                                              ║" << endl;
     cout << "║                                                                              ║" << endl;
-    cout << "╚═══════════════════════════════════════" << endl;   
+    cout << "╚══════════════════════════════════════════════════════════════════════════════+" << endl;   
     cout << "Please select gamemode(1 / 2 / 3 / 4):";
     cin >> temp;
    
