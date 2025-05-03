@@ -3,12 +3,13 @@
 #include "game.h"
 #include "menu.h"
 #include "Threeaimode.h"
+#include "save_load_game.h"
 #include <iostream>
 #include <time.h>
 
 using namespace std;
 
-stastic const int score[3][6] = {
+static const int score[3][6] = {
         {0,0,0,0,0,10000},
 	{0,0,20,100,3000,10000},
 	{0,25,125,500,2500,10000}
@@ -89,24 +90,26 @@ void Ai_best_move(int &x, int &y, vector<vector<char>> p){
 
 //fantastic work! Master method - the most difficult one in a standard board
 int p_v_a3(int &gs){
-    string move, saw, step2;
+    string move, saw, step2, sawa;
     srand((unsigned)time(NULL));
     instruction();
     cout << "It's the master method, so you will move after the ai. Wish you lcuky!" << endl;
     ai = 1;                                //ai = 1 for AI moves first
     print_board(board);
-    turnnumber = 0;
+    int turnnumber = 0;
     while (judge(board, step_count) == 0)
     {
         if (turnnumber == 0){
-	   move = "HH"
+	   move = "HH";
 	   cout << "AI, move: " << move << endl;
 	   cout << endl;
-	   if (make_move(board, move) == 0{
+	   if (make_move(board, move) == 0){
 	      print_board(board);
 	      step_count++;
 	   }
-	   else cout << "AI pass." << endl;
+	   else{ 
+	       cout << "AI pass." << endl;
+	   }
 	}
 	
 	if (turnnumber == 2){
@@ -168,7 +171,7 @@ int p_v_a3(int &gs){
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
 		  cout << endl;
-		  prin_board(board);
+		  print_board(board);
 		  step_count++;
 		}
 		else if (saw != "GG" && sawa != "GG")
@@ -205,7 +208,7 @@ int p_v_a3(int &gs){
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
 		  cout << endl;
-		  prin_board(board);
+		  print_board(board);
 		  step_count++;
 		}
 		else if (saw != "II" && sawa != "II")
@@ -242,7 +245,7 @@ int p_v_a3(int &gs){
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
 		  cout << endl;
-		  prin_board(board);
+		  print_board(board);
 		  step_count++;
 		}
 		else if (saw != "GI" && sawa != "GI")
@@ -279,7 +282,7 @@ int p_v_a3(int &gs){
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
 		  cout << endl;
-		  prin_board(board);
+		  print_board(board);
 		  step_count++;
 		}
 		else if (saw != "IG" && sawa != "IG")
@@ -316,7 +319,7 @@ int p_v_a3(int &gs){
 		  make_move(board, move);
 		  cout << "AI, move: " << move << endl;
 		  cout << endl;
-		  prin_board(board);
+		  print_board(board);
 		  step_count++;
 		}
 		else if (saw != "GI" && sawa != "GI")
