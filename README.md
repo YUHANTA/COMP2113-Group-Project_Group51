@@ -15,7 +15,7 @@ This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao
 
 [Game Feature](#Game_Feature)
 
- [Additional Explanation](#Additional_Explanation)
+[Additional Explanation](#Additional_Explanation)
 
 Demonstration Video:
 
