@@ -43,10 +43,10 @@ int AI_Cal_Score(vector<vector<char>> p, int x, int y, char chess){
             int dy = y + j * inY[i];
             while (dx >= 0 && dx < p.size() && dy >= 0 && dy < p[0].size()){
                 if (p[dx][dy] == chess)                                         //count +1 if same colour
-                    count++;
+                    ++count;
                 else{
                     if (p[dx][dy] == ' ')
-                        s++;                                                   //s+1 if null
+                        ++s;                                                   //s+1 if null
                     break;
                 }
                 dx += j * inX[i];
