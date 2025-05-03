@@ -54,7 +54,7 @@ int AI_Cal_Score(vector<vector<char>> p, int x, int y, char chess){
             }
         }
         if (count > 5) count = 5;
-        r += Score[s][count];                                                   //sum the score for each direction
+        r += score[s][count];                                                   //sum the score for each direction
     }
     return r;
 }
@@ -114,7 +114,7 @@ int p_v_a3(int &gs){
 	
 	if (turnnumber == 2){
 	   if (saw == "GG" || saw == "GH" || saw == "HG"){
-	     move = "II"
+	     move = "II";
 	     cout << "AI, move: " << move << endl;
              cout << endl;
 	     make_move(board, move);
