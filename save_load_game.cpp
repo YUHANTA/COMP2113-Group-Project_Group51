@@ -16,7 +16,7 @@ bool load_file(int& gs) {
 	string line, last_line;
 	std::ifstream load("save.dat",ios::in);
 	if (!load.is_open()) {
-		return false;
+		return false; //check if the file fail to open
 	}
 	while (getline(load, line)) {
 		last_line = line;
@@ -24,17 +24,17 @@ bool load_file(int& gs) {
 	gs = stoi(last_line);
 	load.close();
 	return true;
-}
+}//load_file(success)
 
 void save_file(vector<vector<char>>p) {
 	time_t now = time(0);
 	char* dt = ctime(&now);
 	std::ofstream save("save.dat", ios::out | ios::app);
-	char* row_arr = new char[26]();
+	char* row_arr = new char[26](); //Gameboard( with maximum 26* 26)
 	char* col_arr = new char[26]();
 
 	for (size_t i = 0; i != row; i++) {
-		row_arr[i] = 65 + i;			//ACII of A-Z
+		row_arr[i] = 65 + i;			//ACSII of A-Z(the for loop in the folllowing is the same)
 
 	}
 	for (size_t i = 0; i != column; i++) {
@@ -99,10 +99,10 @@ void save_file(vector<vector<char>>p) {
 			}
 			save << endl;
 		}
-	}
+	}// save the file (figuring out saved as which mode)
 	save << endl;
 	save << game_score << endl;
 	delete[] row_arr;
 	delete[] col_arr;
-	save.close(); 
+	save.close(); //end_save
 	}
