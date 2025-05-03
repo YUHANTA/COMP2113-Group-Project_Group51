@@ -94,7 +94,7 @@ int p_v_a3(int &gs){
     srand((unsigned)time(NULL));
     instruction();
     cout << "It's the master method, so you will move after the ai. Wish you lcuky!" << endl;
-    ai = 1;                                //ai = 1 for AI moves first
+    ai = '1';                               //ai = 1 for AI moves first
     print_board(board);
     int turnnumber = 0;
     while (judge(board, step_count) == 0)
