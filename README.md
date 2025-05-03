@@ -13,7 +13,7 @@ This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao
 
 [Game Rules](#Game_Rules)
 
-[Game Features](#Game_Feature)
+[Game Features](##Game_Feature_(Reaching_the_requirements_of_the_project))
 
 [Addtional Explanation](#Additional_Explanation)
 
