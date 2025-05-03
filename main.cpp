@@ -3,7 +3,7 @@
 #include <vector>
 #include "main.h"
 #include "Threeaimode.h"
-#include "munu.h"
+#include "menu.h"
 #include "save_load_game.h"
 
 using namespace std;
@@ -16,40 +16,55 @@ char gamemode = 'x';
 char player = '1';
 char ai = '0';
 int game_score = 0;
-unsighed step_count = 0;
+unsigned step_count = 0;
 
-void build_ board(vector<vector<vhar>>&p){
+void build_board(vector<vector<char>>&p){
      vector<char> board_temp;
-     for (int i = 0; i < column; i++) 
+     for (size_t  i = 0; i < column; i++) 
          board_temp.push_back(' ');
-     for (int i = 0; i < row; i++0
+     for (size_t i = 0; i < row; i++)
          p.push_back(board_temp);
 }
 
-void print_board(vector<vector<vhar>>&p){
-     char *row_air = new char[26]();
-     char *col_arr = new char[26]();
-     for (int i = 0; i < column; i+=)
-         col_arr[i] = 65 + i;
-     for (int i = 0; i < row; i++)
-         row_arr[i] = 65 + i;
-     cout << "| |"
-     for (int i = 0; i < colmn; i++)
-         cout << col_aor[i] << "|";
-     cout << endl;
-     for (int i = 0; i < row; i++){
-         cout << "|" << row_arr[i] << "|";
-	 for (int j = 0; j < column; j++){
-	     if (p[i][j] == '1')
-	        cout << black_chess << '|';
-	     else if (p[i][j] == '2')
-	        cout << white_chess << '|';
-	     else
-	        cout << p[i][j] << '|';
-	     cout << endl;
-	 } cout << endl;
-	 delete [] row_arr;
-	 delete [] col_arr;
+void print_board(vector<vector<char>> p)
+{
+    char *row_arr = new char[26]();            //MAX = 26
+    char *col_arr = new char[26]();            //MAX = 26
+
+    for (size_t i = 0; i != row; i++)
+    {
+        row_arr[i] = 65 + i;                    // A-Z = 65-90 (ASCII)
+    }
+
+    for (size_t i = 0; i != column; i++)
+    {
+        col_arr[i] = 65 + i;                    // A-Z = 65-90 (ASCII)
+    }
+
+    //output part
+    cout << "| |";
+    for (size_t i = 0; i != column; i++)
+    {
+        cout << col_arr[i] << '|';
+    }
+    cout << endl;
+
+    for (size_t i = 0; i != row; i++)
+    {
+        cout << '|' << row_arr[i] << '|';
+        for (size_t j = 0; j != column; j++)
+            if (p[i][j] == '1')
+                cout << black_chess << '|';
+            else if (p[i][j] == '2')
+                cout << white_chess << '|';
+            else
+                cout << p[i][j] << '|';
+        cout << endl;
+    }
+    cout << endl;
+    //release memory
+    delete [] row_arr;
+    delete [] col_arr;
 }
 
 void BoardSize(LENGTH &r, LENGTH &c){
@@ -58,7 +73,7 @@ void BoardSize(LENGTH &r, LENGTH &c){
      cout << "It's recommented to make XX = YY, but anyway you can use what you like. Just like ths saying 'This Game is Your World!'" << endl;
      cout << "Hint: XX = row, YY = column" << endl;
      cin >> a >> b;
-     while ((a < 5 || b > 26) || (b < 5 || b > 26){
+     while ((a < 5 || b > 26) || (b < 5 || b > 26)){
         cout << "Your input is invalid. Please input again." << endl;
 	cout << "Enter Board size you want with formats XX YY, please make sure  both XX and YY are between 5 - 26" << endl;
         cout << "It's recommented to make XX = YY, but anyway you can use what you like. Just like ths saying 'This Game is Your World!'" << endl;
@@ -82,7 +97,7 @@ int make_move(vector<vector<char>>& p, string move){
            row_location_letter = toupper(move[0]) - 65; // change A-Z to real row number;
            column_location_letter = toupper(move[1]) - 65;//also same with above-Real column number
        }
-       else retuern -1; //no change
+       else return -1; //no change
     }
     else return -1;
     if (p[row_location_letter][column_location_letter] == ' '){//judge is it a empty place to put this step
@@ -138,7 +153,6 @@ int judge(vector<vector<char>> b, int n)
 
 int p_v_p(){
     string move;
-    instruction();
     print_board(board);
     while (judge(board, step_count) == 0){
           cout << "Player " << player << ",move: ";
@@ -153,7 +167,7 @@ int p_v_p(){
 	  }
 	  swap_player(player);
     }
-    switch (judge(board, step_count){
+    switch (judge(board, step_count)){
            case 1: 
 	      cout << "player 1 win" << endl;
 	   case 2:
@@ -179,49 +193,54 @@ bool start_new_game(){
 
 void InitialLoadFunc(bool &hongkong){
      string y;
-     if (load_file(game_score)
-        cout << "Players, welcome back,your current score is " << game_score << endl;
+     if (load_file(game_score))
+     {   cout << "Players, welcome back,your current score is " << game_score << endl;
+     }
      else{
-         cout << "You have new players and no save, do you need our tutorial class. Don't worry it will not occupy too much time.(Y/N): "
-	 cin y;
-	 if (x == "Y") hongkong = true;
-	 else if (x == "N") hongkong = false;
+         cout << "You have new players and no save, do you need our tutorial class. Don't worry it will not occupy too much time.(Y/N): ";
+	 cin >> y;
+	 if (y == "Y") hongkong = true;
+	 else if (y == "N") hongkong = false;
 	 else{ 
 	    cout << "Invalid intput and we will begin our tutorial clss automatically.";
             hongkong = true;
 	 }
+	}
 }
 
 int main(){
-    welcome() //code in menu
+    Welcome() //code in menu
+    //******
     New_game:
+    //*****
 
     bool hongkong = false;
     InitialLoadFunc(hongkong); //bool transfer value
     if (hongkong){
-       tnt_func();
+       tut_func();
     }
 
     select_mode(gamemode);
-    Boardsize(row,column);
+    BoardSize(row,column);
     build_board(board);
 
     if (gamemode == "0"){
-       Boardsize(row, column);
+       BoardSize(row, column);
        build_board(board);
        cout << "You are playing with Player" << endl;
        cout << endl;
+       instruction();
        p_v_p()
     }
-    else if (game mode == '1'){
-       Boardsize(row, column);
+    else if (gamemode == '1'){
+       BoardSize(row, column);
        build_board(board);
        cout << "You are playing with Ai - Easy method" << endl;
        cout << endl;
        p_v_a1(game_score);
     }
-    else if (game mode == '2'){
-       Boardsize(row, column);
+    else if (gamemode == '2'){
+       BoardSize(row, column);
        build_board(board);
        cout << "You are playing with Ai - Difficult method" << endl;
        cout << "Wish you lucky!" << endl;

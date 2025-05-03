@@ -1,6 +1,6 @@
 // 2113-five in a row group 51
-#ifndef COMP2113-Goup-Project_Group51
-#define COMP2113-Goup-Project_Group51
+#ifndef COMP2113_Goup_Project_Group51
+#define COMP2113_Goup_Project_Group51
 #include <vector>
 #include <string>
 using namespace std;
