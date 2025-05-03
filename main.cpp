@@ -3,7 +3,7 @@
 #include <vector>
 #include "game.h"
 #include "save_load_game.h"
-#include "PVAmode.h"
+#include "Threeaimode.h"
 #include "menu.h"
 
 using namespace std;
