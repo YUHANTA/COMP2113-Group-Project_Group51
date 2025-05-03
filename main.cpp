@@ -254,17 +254,17 @@ int main() {
     BoardSize(row, column);
     build_board(board);
 
-    if (gamemode == '1'){
+    if (gamemode == '0'){
         cout << "You are playing with PLAYER" << endl << endl;
         p_v_p();
     }
 
-    else if (gamemode == '2'){
+    else if (gamemode == '1'){
         cout << "You are playing with AI (EASY)" << endl << endl;
         p_v_a1(game_score);
     }
 
-    else if (gamemode == '3'){
+    else if (gamemode == '2'){
         cout << "You are playing with AI (HARD)" << endl << endl;
         p_v_a2(game_score);
     }
