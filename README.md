@@ -15,7 +15,7 @@ This is a game based on five in a row and created by Yu Hanshiyang and Ma Jinhao
 
 [Game Feature](#Game_Feature)
 
-[Additional Explanation](#Additional_Explanation)
+[Additional_Explanation](#Additional_Explanation)
 
 Demonstration Video:
 
@@ -66,7 +66,7 @@ Code requirements:
 6. Multiple Difficulty Levels:
    	Different ai modes: Easy , Hard and Master
 
-## Additional Explanation
+## Additional_Explanation
 ### Defined Global Variables
 ```cpp
 #define black_chess "\xe2\x97\x8f"
