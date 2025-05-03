@@ -1,6 +1,6 @@
 #include <string>
 #include "Threeaimode.h"
-#include "main.h"
+#include "game.h"
 #include "menu.h"
 #include <iostream>
 #include <time.h>
