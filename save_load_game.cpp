@@ -41,13 +41,13 @@ void save_file(vector<vector<char>>p) {
 	}
 	save << "============================================================" << endl;
 	save << "GameTime: " << dt << endl;
-	if (gamemode == "0") {
+	if (gamemode == ‘0’) {
 		save << endl;
 		save << "Gamemode : Player VS Player" << endl;
 		save << "Wineer : Player" << player << endl;
 
 	}
-	else if (gamemode == "1") {
+	else if (gamemode == ‘1’) {
 		save << "Gamemode: Player VS AI(Easy)" << endl;
 		{
 			if (Player == ai) {
@@ -59,7 +59,7 @@ void save_file(vector<vector<char>>p) {
 			}
 		}
 	}
-	else if (gamemode == "2") {
+	else if (gamemode == ‘2’) {
 		save << "Gamemoade: Player VS AI(Difficult)" << endl;
 		if (player == ai) {
 			save << "Winner: AI(Difficult moade)" << endl;
@@ -69,7 +69,7 @@ void save_file(vector<vector<char>>p) {
 
 		}
 	}
-	else if (gamemoade == "3") {
+	else if (gamemoade == ‘3’) {
 		save << "Gamemoade: Player VS AI(Master)" << endl;
 		if (player == ai) {
 			save << "Winner : AI (MasterMode)" << endl;
@@ -87,7 +87,7 @@ void save_file(vector<vector<char>>p) {
 	for (size_t i = 0; i != row; i++) {
 		save << "|" << row_arr[i] << "|";
 		for (size_t j = 0; j != column; j++) {
-			if (p[i[j] == '1') {
+			if (p[i][j] == '1') {
 				save << black_chess << "|";
 			}
 			else if (p[i][j] == '2') {
