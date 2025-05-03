@@ -62,16 +62,12 @@ Code requirements:
    	Different ai modes: Easy , Hard and Master
 
 ## Other explanations
-Defined Flobal Varibales
-#define black_chess "\xe2\x97\x8f"
-#define white_chess "\xe2\x97\x8e"
-typedef int	LENGTH;
-LENGTH column = 13;    //default column
-LENGTH row = 6;		//default row
+Additonal Library :NOne
 
-char gamemode = 'x';
-char player = '1';
-char ai = '0';
-unsigned step_count = 0;
-int game_score = 0;
-#Game_flow
+
+##Compile Instructions
+Run make game to compile the gam
+DO ./game to start the game
+Run make clean to clean all the generated files
+
+ 
