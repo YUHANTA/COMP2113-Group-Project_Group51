@@ -60,3 +60,18 @@ Code requirements:
    	Functions( different functions to be involved in the game, such as welcome page, ai mode, and others) are stored in different files
 6. Multiple Difficulty Levels:
    	Different ai modes: Easy , Hard and Master
+
+## Other explanations
+Defined Flobal Varibales
+#define black_chess "\xe2\x97\x8f"
+#define white_chess "\xe2\x97\x8e"
+typedef int	LENGTH;
+LENGTH column = 13;    //default column
+LENGTH row = 6;		//default row
+
+char gamemode = 'x';
+char player = '1';
+char ai = '0';
+unsigned step_count = 0;
+int game_score = 0;
+#Game_flow
