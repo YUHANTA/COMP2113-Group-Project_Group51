@@ -274,7 +274,7 @@ int main() {
     }
     else{
         row = 15;
-        colomn = 15;
+        column = 15;
         build_board(board);
         cout << "You are playing with AI (HARD)" << endl << endl;
         p_v_a3(game_score);
