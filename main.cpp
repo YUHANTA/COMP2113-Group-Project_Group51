@@ -251,24 +251,31 @@ int main() {
     }
 
     select_mode(gamemode);
-    BoardSize(row, column);
-    build_board(board);
 
     if (gamemode == '0'){
+        BoardSize(row, column);
+        build_board(board);
         cout << "You are playing with PLAYER" << endl << endl;
         p_v_p();
     }
 
     else if (gamemode == '1'){
+        BoardSize(row, column);
+        build_board(board);
         cout << "You are playing with AI (EASY)" << endl << endl;
         p_v_a1(game_score);
     }
 
     else if (gamemode == '2'){
+        BoardSize(row, column);
+        build_board(board);
         cout << "You are playing with AI (HARD)" << endl << endl;
         p_v_a2(game_score);
     }
     else{
+        row = 15;
+        colomn = 15;
+        build_board(board);
         cout << "You are playing with AI (HARD)" << endl << endl;
         p_v_a3(game_score);
     }
