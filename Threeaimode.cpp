@@ -112,7 +112,7 @@ int p_v_a3(int &gs){
 	   }
 	}
 	
-	if (turnnumber == 2){
+	else if (turnnumber == 2){
 	   if (saw == "GG" || saw == "GH" || saw == "HG"){
 	     move = "II";
 	     cout << "AI, move: " << move << endl;
@@ -156,7 +156,7 @@ int p_v_a3(int &gs){
 	   step2 = move;
 	}
 	
-	if (turnnumber == 4){
+	else if (turnnumber == 4){
 	  if (step2 == "II"){
 	        if (saw != "IH" && saw != "IG" && sawa != "IH" && sawa != "IG"){
 		  move = "IG";
@@ -343,7 +343,7 @@ int p_v_a3(int &gs){
 		 }
           }
         }
-
+        else{
         if (player != ai){
             cout << "Player move: ";
             cin >> move;
@@ -372,6 +372,7 @@ int p_v_a3(int &gs){
             print_board(board);
             step_count++;
         }
+	}
         swap_player(player);
 	turnnumber++;
     }
@@ -382,7 +383,7 @@ int p_v_a3(int &gs){
                 cout << "player AI win" << endl;
             else{
                 cout << "player win" << endl;
-                gs += 100;
+                gs += 200;
             }
             break;
         case 2:
@@ -390,7 +391,7 @@ int p_v_a3(int &gs){
                 cout << "player AI win" << endl;
             else{
                 cout << "player win" << endl;
-                gs += 100;
+                gs += 200;
             }
             break;
         case 3:
